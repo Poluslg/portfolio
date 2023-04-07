@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .................................... start css for Contact page ................................................. */
+
+
+/* .................................... End css for Contact page ................................................. */
+
+.button12{
+    cursor: pointer;
+}
