@@ -8,7 +8,7 @@ import Contact from './components/Contact'
 
 const App = () => {
   return (
-    <div className="scroll-smooth hover:scroll-auto md:scroll-auto" >
+    <div className=" overflow-hidden scroll-smooth hover:scroll-auto md:scroll-auto" >
       <Header  className=" flex  absolute"/>
       <Home/>
       <Projects/>

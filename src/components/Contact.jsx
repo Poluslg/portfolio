@@ -52,7 +52,10 @@ function Contact() {
   };
   return (
     <form>
-      <div id="contact" className="  space-y-12 px-4 pt-4 bg-gradient-to-r from-white to-polu-500  ">
+      <div
+        id="contact"
+        className="  space-y-12 px-4 pt-4 bg-gradient-to-r from-white to-polu-500  "
+      >
         <h2 className="text-base font-semibold leading-7 text-gray-900 text-center">
           Contact With Us
         </h2>
@@ -83,13 +86,11 @@ function Contact() {
             </div>
 
             <div className="sm:col-span-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Email address
-              </label>
-              <div className="mt-2">
+              <label class="block">
+                <span class="block text-sm font-medium leading-6 text-gray-900">
+                  Email
+                </span>
+                
                 <input
                   id="email"
                   name="email"
@@ -97,9 +98,12 @@ function Contact() {
                   autoComplete="email"
                   value={user.email}
                   onChange={getUserData}
-                  className="block w-48 px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full"
+                  class="peer block w-48 px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full " 
                 />
-              </div>
+                <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                  Please provide a valid email address.
+                </p>
+              </label>
             </div>
             <div className="col-span-4">
               <label
