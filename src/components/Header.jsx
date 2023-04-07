@@ -1,89 +1,66 @@
 import React, { useState } from "react";
 
-const Header = () => {
-  const onToggleMenu = (event) => {
-    event.name = event.name === "menu" ? "close" : "menu";
+const navigation = [
+  { name: 'Home', href: '#home', current: true },
+  { name: 'About', href: '#About', current: false },
+  { name: 'Projects', href: '#projects', current: false },
+  { name: 'Contact', href: '#contact', current: false },
+]
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <>
-      <div className="bg-gradient-to-r from-white to-polu-500 h-screen">
-        <header className="bg-white">
-          <nav className="flex justify-between items-center w-[92%] mx-auto">
-            <div>
-              <img
-                className="w-16 cursor-pointer"
-                src="./imgs/favicon.png"
-                alt="polulogo"
-              />
-            </div>
-            <div className="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-              <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                <li>
-                  <a className="hover:text-gray-500" href="#home">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-500" href="#About">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-500" href="#projects">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-500" href="#contact">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex items-center gap-6">
-              <button className="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]  ">
-                Hire Me
-              </button>
-              <div>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  className="md:hidden"
+    <div className="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]  ">
+      <header className="bg-white">
+        <nav className="flex justify-between items-center w-[92%] mx-auto">
+          <div>
+            <img
+              className="w-[50px] cursor-pointer"
+              src="./imgs/favicon.png"
+              alt="..."
+            />
+          </div>
+          <div
+            className={`nav-links duration-500 md:static absolute bg-gray-200 md:min-h-fit min-h-[60vh] left-0 ${isMenuOpen ? "top-0 fixed w-full " : "top-[-100%]"
+              } flex items-center px-5 rounded-[11px]`}
+          >
+            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 w-[37rem]">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? 'bg-gradient-to-r from-gray-200 to-black text-black' : 'text-black hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  ></path>
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  name="close"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 md:hidden"
-                  onClick={onToggleMenu}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </div>
-            </div>
-          </nav>
-        </header>
-      </div>
-    </>
-  );
-};
+                  {item.name}
+                </a>
+              ))}
+            </ul>
+          </div>
 
-export default Header;
+          <div className="flex items-center gap-6">
+            <button className="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">
+              Hire Me
+            </button>
+            <ion-icon
+              onClick={toggleMenu}
+              name={isMenuOpen ? "close" : "menu"}
+              className="text-3xl cursor-pointer md:hidden"
+            ></ion-icon>
+          </div>
+        </nav>
+      </header>
+    </div>
+  );
+}
