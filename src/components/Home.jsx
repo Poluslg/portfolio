@@ -4,7 +4,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <div id="home" className=" bg-gradient-to-r from-white to-polu-500 h-screen ">
+      <div id="home" className=" bg-slate-300 h-screen  dark:bg-gradient-to-r from-black to-polu-500 ">
         <main>
           <div className=" max-w-7xl py-6 px-10 sm:px-10 lg:px-8 ">
             <h1 className="text-7xl font-bold tracking-tight text-purple-800 ">
