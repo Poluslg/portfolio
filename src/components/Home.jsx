@@ -20,7 +20,7 @@ const Home = () => {
               Showcasing creativity through code.
             </h1>
             <div className="py-6">
-              <button className=" max-w-screen-sm px-8  py-2 rounded-md bg-red-500 border-solid border-1 border-red-500 hover:bg-blue-600 text-white dark:text-black sm:px-4 lg:px-5 ">
+              <button className=" max-w-screen-sm px-8  py-2 rounded-md bg-red-500 border-solid border-1 border-red-500 hover:bg-gradient-to-r from-black to-polu-500 text-white dark:text-black sm:px-4 lg:px-5 ">
                 Learn more
               </button>
             </div>

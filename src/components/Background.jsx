@@ -23,7 +23,7 @@ export default function App() {
     })
 
     return (
-        <Canvas camera={{ position: [0, 0, 5], fov: 90 }}>
+        <Canvas camera={{ position: [5, 15, 5], fov: 90 }}>
             <color />
             <Lines dash={dash} count={count} radius={radius} colors={[[10, 0.5, 2], [1, 2, 10], '#003cff', '#052f57', '#EE786E', '#e0feff']} />
             <Rig />
@@ -54,7 +54,7 @@ function Lines({ dash, count, colors, radius = 50, rand = THREE.MathUtils.randFl
 
 function Fatline({ curve, width, color, speed, dash }) {
     const ref = useRef()
-    useFrame((state, delta) => (ref.current.material.dashOffset -= (delta * speed) / 10))
+    useFrame((state, delta) => (ref.current.material.dashOffset -= (delta * speed) / 20))
     return (
         <mesh ref={ref}>
             <meshLineGeometry points={curve} />
@@ -63,9 +63,9 @@ function Fatline({ curve, width, color, speed, dash }) {
     )
 }
 
-function Rig({ radius = 40 }) {
+function Rig({ radius = 60 }) {
     useFrame((state, dt) => {
         easing.damp3(state.camera.position, [Math.sin(state.pointer.x) * radius, Math.atan(state.pointer.y) * radius, Math.cos(state.pointer.x) * radius], 0.25, dt)
-        state.camera.lookAt(0, 0, 0)
+        state.camera.lookAt(4, 5, 6)
     })
 }
