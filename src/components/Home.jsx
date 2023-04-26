@@ -1,4 +1,6 @@
 import React from "react";
+import "./Home.css"
+import Background from "./Background";
 
 
 const Home = () => {
@@ -19,6 +21,7 @@ const Home = () => {
               </button>
             </div>
           </div>
+          <Background/>
         </main>
       </div>
     </>
