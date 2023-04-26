@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 import { extend, Canvas, useFrame } from '@react-three/fiber'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
@@ -10,6 +10,12 @@ extend({ MeshLineGeometry, MeshLineMaterial })
 
 export default function App() {
 
+    useEffect(() => {
+        let leva = document.getElementById('leva__root')
+        if (leva)
+            leva.style.display = 'none'
+    }, [])
+
     const { dash, count, radius } = useControls({
         dash: { value: 0.99, step: 0.05 },
         count: { value: 50, step: 1 },
@@ -17,7 +23,6 @@ export default function App() {
     })
 
     return (
-
         <Canvas camera={{ position: [0, 0, 5], fov: 90 }}>
             <color />
             <Lines dash={dash} count={count} radius={radius} colors={[[10, 0.5, 2], [1, 2, 10], '#003cff', '#052f57', '#EE786E', '#e0feff']} />
@@ -58,7 +63,7 @@ function Fatline({ curve, width, color, speed, dash }) {
     )
 }
 
-function Rig({ radius = 50 }) {
+function Rig({ radius = 40 }) {
     useFrame((state, dt) => {
         easing.damp3(state.camera.position, [Math.sin(state.pointer.x) * radius, Math.atan(state.pointer.y) * radius, Math.cos(state.pointer.x) * radius], 0.25, dt)
         state.camera.lookAt(0, 0, 0)
