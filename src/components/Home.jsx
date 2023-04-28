@@ -9,9 +9,6 @@ export const Home = () => {
         className="bg-[#25CCF7] h-screen  dark:bg-gradient-to-r from-black to-polu-500 "
       >
         <main>
-          {/* <div className=" flex relative h-screen">
-            <Background />
-          </div> */}
           <div className=" max-w-7xl py-6 px-10 sm:px-10 lg:px-8  absolute top-16">
             <h1 className="text-7xl font-bold tracking-tight text-transparent bg-gradient-to-r from-red-500 to-blue-600    dark:text-transparent  bg-clip-text">
               Think. Make. Solv.

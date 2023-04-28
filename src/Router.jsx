@@ -21,6 +21,27 @@ const router = createBrowserRouter([
                     return { Component: About };
                 },
             },
+            {
+                path:"projects",
+                async lazy() {
+                    let { Projects } = await import("./components/Projects");
+                    return { Component: Projects };
+                },
+            },
+            {
+                path:"contact",
+                async lazy() {
+                    let { Contact } = await import("./components/Contact");
+                    return { Component: Contact };
+                },
+            },
+            {
+                path:"*",
+                async lazy() {
+                    let { ErrorPage } = await import("./components/ErrorPage");
+                    return { Component: ErrorPage };
+                },
+            },
         ]
 
     }

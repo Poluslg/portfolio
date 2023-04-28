@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Header.css";
 
 const navigation = [
-  { name: "Home", href: "#home", current: true },
-  { name: "About", href: "#About", current: false },
-  { name: "Projects", href: "#projects", current: false },
-  { name: "Contact", href: "#contact", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "About", href: "/About", current: false },
+  { name: "Projects", href: "/projects", current: false },
+  { name: "Contact", href: "/contact", current: false },
 ];
 
 export default function Header() {
@@ -40,8 +40,10 @@ export default function Header() {
             />
           </div>
           <div
-             className={`nav-links  z-[1] duration-500 md:static absolute bg-white dark:bg-slate-700 md:min-h-fit pt-[5rem] pb-[3rem]  md:py-0 left-0 ${
-              isMenuOpen ? "z-5  top-0 rounded-2xl shadow-lg  shadow-black" : "top-[-50vh] z-0  "
+            className={`nav-links  z-[1] duration-500 md:static absolute bg-white dark:bg-slate-700 md:min-h-fit pt-[5rem] pb-[3rem]  md:py-0 left-0 ${
+              isMenuOpen
+                ? "z-5  top-0 rounded-2xl shadow-lg  shadow-black"
+                : "top-[-50vh] z-0  "
             } md:w-auto w-full flex items-center px-5 bg-stone-100 `}
           >
             <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">

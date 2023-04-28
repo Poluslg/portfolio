@@ -175,7 +175,7 @@
 
 import React from "react";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <div
       id="contact"
@@ -186,4 +186,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+
