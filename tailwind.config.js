@@ -11,6 +11,7 @@ export default {
         polu:{
           500: '#7412f5'
         },
+        
       },
       
     },

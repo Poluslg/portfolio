@@ -29,26 +29,26 @@ export default function Header() {
     }
   };
   return (
-    <div className="sticky sm:relative z-[1] top-[-2px] font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-fit">
-      <header className="bg-slate-100 dark:bg-slate-700">
-        <nav className="flex justify-between items-center w-[92%] mx-auto  mb-[-2px]">
+    <div className="sticky sm:relative z-[1] font-[Poppins]  h-fit">
+      <header className="bg-[#25CCF7]  shadow-lg  shadow-blue-500/50 dark:bg-slate-700 dark:border-slate-700 dark:shadow-cyan-500/30 ">
+        <nav className="flex justify-between items-center w-[92%] mx-auto h-[3rem]">
           <div className=" z-[2]">
             <img
-              className="w-[50px] cursor-pointer"
+              className="w-[50px] cursor-pointer md:pt-0  mb-1 mt-1 "
               src="./imgs/favicon.png"
               alt="PoluLogo"
             />
           </div>
           <div
-            className={`nav-links  z-[1] duration-500 md:static absolute bg-slate-100 dark:bg-slate-700 md:min-h-fit pt-[5rem] pb-[3rem] sm:py-0 left-0 ${
-              isMenuOpen ? "z-5  top-0" : "top-[-50vh] z-0  "
-            } md:w-auto w-full flex items-center px-5 bg-stone-100`}
+             className={`nav-links  z-[1] duration-500 md:static absolute bg-[#25CCF7] dark:bg-slate-700 md:min-h-fit pt-[5rem] pb-[3rem]  md:py-0 left-0 ${
+              isMenuOpen ? "z-5  top-0 rounded-2xl shadow-lg  shadow-black" : "top-[-50vh] z-0  "
+            } md:w-auto w-full flex items-center px-5 bg-stone-100 `}
           >
-            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <a
-                    className="hover:text-gray-500 dark:hover:text-white"
+                    className="hover:text-red-500 dark:hover:text-white transition ease-out delay-100 duration-500 "
                     href={item.href}
                     onClick={toggleMenu}
                   >
@@ -60,7 +60,7 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-6 z-[2]">
-            <button className="bg-[#a6c1ee]  text-white px-5 py-2 rounded-full hover:bg-polu-500 sm:px-3">
+            <button className="bg-[#a6c1ee] dark:bg-polu-500  text-black dark:text-white px-5 py-2 rounded-full hover:bg-polu-500  dark:hover:bg-[#a6c1ee] dark:hover:text-white  transition duration-500 ease-in-out sm:px-3">
               Hire Me
             </button>
             <div>
