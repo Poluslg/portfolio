@@ -30,7 +30,7 @@ export default function Header() {
   };
   return (
     <div className="sticky sm:relative z-[1] font-[Poppins]  h-fit">
-      <header className="bg-[#25CCF7]  shadow-lg  shadow-blue-500/50 dark:bg-slate-700 dark:border-slate-700 dark:shadow-cyan-500/30 ">
+      <header className="bg-white  shadow-lg  shadow-blue-500/50 dark:bg-slate-700 dark:border-slate-700 dark:shadow-cyan-500/30 ">
         <nav className="flex justify-between items-center w-[92%] mx-auto h-[3rem]">
           <div className=" z-[2]">
             <img
@@ -40,7 +40,7 @@ export default function Header() {
             />
           </div>
           <div
-             className={`nav-links  z-[1] duration-500 md:static absolute bg-[#25CCF7] dark:bg-slate-700 md:min-h-fit pt-[5rem] pb-[3rem]  md:py-0 left-0 ${
+             className={`nav-links  z-[1] duration-500 md:static absolute bg-white dark:bg-slate-700 md:min-h-fit pt-[5rem] pb-[3rem]  md:py-0 left-0 ${
               isMenuOpen ? "z-5  top-0 rounded-2xl shadow-lg  shadow-black" : "top-[-50vh] z-0  "
             } md:w-auto w-full flex items-center px-5 bg-stone-100 `}
           >

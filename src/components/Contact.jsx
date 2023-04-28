@@ -179,7 +179,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-slate-100 h-screen  dark:bg-gradient-to-r from-black to-polu-500 "
+      className="bg-[#25CCF7] h-screen  dark:bg-gradient-to-r from-black to-polu-500"
     >
       <div className=" text-white text-center">Contact</div>
     </div>
