@@ -13,19 +13,21 @@ export default function Header() {
 
   const toggleMenu = () => {
     const content = document.getElementById("content");
-    if (content.classList.contains("blur-[5px]")) {
-      content.classList.remove("blur-[5px]");
-    } else {
-      content.classList.add("blur-[5px]");
-    }
+    // if (content.classList.contains("blur-[5px]")) {
+    //   content.classList.remove("blur-[5px]");
+    // } else {
+    //   content.classList.add("blur-[5px]");
+    // }
     setIsMenuOpen(!isMenuOpen);
   };
   const toggleMode = () => {
     let html = document.getElementsByTagName("html")[0];
     if (html.classList.contains("dark")) {
       html.classList.remove("dark");
+      localStorage.removeItem("dark");
     } else {
       html.classList.add("dark");
+      localStorage.setItem("dark", "enabled");
     }
   };
   return (
