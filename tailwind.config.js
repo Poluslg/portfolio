@@ -8,9 +8,6 @@ export default {
         polu: {
           500: "#7412f5",
         },
-        polu2: {
-          500: "#1abc9c",
-        },
       },
     },
   },

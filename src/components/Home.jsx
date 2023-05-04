@@ -17,8 +17,7 @@ export const Home = () => {
               Showcasing creativity through code.
             </h1>
             <div className="py-6">
-              <button className=" max-w-screen-sm px-8  py-2 rounded-md bg-red-500 border-solid border-1 border-red-500 text-white dark:text-black transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-red-300 duration-300 sm:px-4 lg:px-5 ">
-                
+              <button className=" max-w-screen-sm px-8  py-2 rounded-md bg-red-500 border-solid border-1 border-red-500 text-white dark:text-black transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-red-400 duration-300 sm:px-4 lg:px-5 ">
                 Learn more
               </button>
             </div>

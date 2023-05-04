@@ -7,8 +7,8 @@ const Base = () => {
   return (
     <>
       <Header />
-      <div>
-        <div className="fixed top-0 h-[100vh] w-full">
+      <div id="content" className="sm:blur-0 z-[0] overflow-hidden scroll-smooth hover:scroll-auto md:scroll-auto" >
+        <div className="fixed top-0 h-[100%] w-full">
           <Background />
         </div>
         <Outlet />
