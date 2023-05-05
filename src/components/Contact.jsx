@@ -55,7 +55,7 @@ export const Contact = () => {
       id="contact"
       className="bg-[#56e5f0] h-screen  dark:bg-gradient-to-r from-black to-polu-500 "
     >
-      <div className="absolute flex pt-16 ">
+      <div className=" relative  flex pt-16 flex-col items-center ">
         <h2 className="  text-base font-semibold leading-7 text-gray-900 dark:text-white text-center ">
           Contact With Us
         </h2>
