@@ -1,12 +1,11 @@
 import React from "react";
-// import Background from "./Background";
 
 export const Home = () => {
   return (
     <>
       <div
         id="home"
-        className="bg-[#56e5f0] h-screen  dark:bg-gradient-to-r from-black to-polu-500 "
+        className="bg-gray-100 h-screen  dark:bg-gradient-to-r from-black to-polu-500 "
       >
         <main>
           <div className=" max-w-7xl py-6 px-10 sm:px-10 lg:px-8  absolute top-16">

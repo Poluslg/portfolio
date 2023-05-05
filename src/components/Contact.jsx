@@ -76,7 +76,7 @@ export const Contact = () => {
                   value={user.name}
                   onChange={getUserData}
                   autoComplete="name"
-                  className="block w-48 px-2 rounded-md border-0 py-1.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full"
+                  className="block w-48 px-2 rounded-md border-0 py-1.5 text-gray-900  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full"
                 />
               </div>
             </div>
@@ -94,7 +94,7 @@ export const Contact = () => {
                   autoComplete="email"
                   value={user.email}
                   onChange={getUserData}
-                  className="peer block w-48 px-2 rounded-md border-0 py-1.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full "
+                  className="peer block w-48 px-2 rounded-md border-0 py-1.5 text-gray-900  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full "
                 />
                 <p className="mt-2 w-[52vw] invisible peer-invalid:visible text-pink-600 text-sm">
                   Please provide a valid email address.
@@ -116,7 +116,7 @@ export const Contact = () => {
                   autoComplete="tel"
                   value={user.number}
                   onChange={getUserData}
-                  className="block w-48  px-2 rounded-md border-0 py-1.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full"
+                  className="block w-48  px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 sm:w-full"
                 />
               </div>
             </div>
@@ -134,7 +134,7 @@ export const Contact = () => {
                   name="message"
                   value={user.message}
                   onChange={getUserData}
-                  className="block w-48 px-2 rounded-md border-0 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6 sm:w-full"
+                  className="block w-48 px-2 rounded-md border-0 text-gray-900  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6 sm:w-full"
                   defaultValue={""}
                 />
               </div>
